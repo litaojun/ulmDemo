@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RegisterAndLoginDemo</string>
+    <string name="userpic">用户图片</string>
+    <string name="nickname">用户昵称</string>
+    <string name="username">用户手机</string>
+    <string name="copyright_content">by xdf</string>
+     <string name="back_name">back</string>
+     <string name="history_name">历史记录</string>
+</resources>
