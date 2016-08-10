@@ -246,27 +246,8 @@ public class WeixinMainActivity extends Activity implements OnClickListener,OnUp
 			picPath = data.getStringExtra(SelectPicActivity.KEY_PHOTO_PATH);
 			Log.i(TAG, "最终选择的图片="+picPath);
 			Bitmap bm = BitmapFactory.decodeFile(picPath);
-			  int width = bm.getWidth(); 
-		        int height = bm.getHeight(); 
-		        //定义预转换成的图片的宽度和高度 
-		        int newWidth = 100; 
-		        int newHeight = 100;
-		      //计算缩放率，新尺寸除原始尺寸 
-		        float scaleWidth = ((float) newWidth) / width; 
-		        float scaleHeight = ((float) newHeight) / height; 
-		        // 创建操作图片用的matrix对象 
-		        Matrix matrix = new Matrix(); 
-		        // 缩放图片动作 
-		        matrix.postScale(scaleWidth, scaleHeight); 
-
-		        //旋转图片 动作 
-		        //matrix.postRotate(45); 
-
-		        // 创建新的图片 
-		        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, 
-		                          width, height, matrix, true); 
-		        BitmapDrawable bmd = new BitmapDrawable(this.getResources(),resizedBitmap); 
-		        imageView.setImageDrawable(bmd); 
+		    BitmapDrawable bmd = updateBimpSize(bm); 
+		   imageView.setImageDrawable(bmd); 
 			//imageView.setImageBitmap(bm);
 		}
 		super.onActivityResult(requestCode, resultCode, data);
@@ -280,8 +261,8 @@ public class WeixinMainActivity extends Activity implements OnClickListener,OnUp
 		int width = bm.getWidth(); 
         int height = bm.getHeight(); 
         //定义预转换成的图片的宽度和高度 
-        int newWidth = 100; 
-        int newHeight = 100;
+        int newWidth = 500; 
+        int newHeight = 500;
       //计算缩放率，新尺寸除原始尺寸 
         float scaleWidth = ((float) newWidth) / width; 
         float scaleHeight = ((float) newHeight) / height; 

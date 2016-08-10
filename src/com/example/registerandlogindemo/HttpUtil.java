@@ -8,9 +8,10 @@ import com.loopj.android.http.RequestParams;
 
 public class HttpUtil {
 	//private static final String BASE_URL = "http://192.168.43.253:8080/";
-    private static final String BASE_URL = "http://192.168.173.184:8080/";
+    //private static final String BASE_URL = "http://192.168.173.184:8080/";
     //private static final String BASE_URL = "http://192.168.173.1:8080/";
 	//private static final String BASE_URL = "http://192.168.43.120:8080/";
+    private static final String BASE_URL = "http://10.61.8.152:8080/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 

@@ -11,6 +11,7 @@ public class UrlConstance {
 	   
    public static String sessionkey="session";
    public static String username="";
+   public static String password="";
    public static String nickname="";
    public static String imgurl="";
    public static boolean loginsign=false;
